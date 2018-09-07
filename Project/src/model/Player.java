@@ -6,8 +6,20 @@ public class Player {
 	private int habilitieLevel;
 	private String name;
 	private double latence;
-	
-	public Player(int level, int habilitieLevel, String name, double latence) {
+	private int deads;
+	private int kills;
+	private int playedMatchs;
+	private int wonMatchs;
+	private double averageKillsAboveDeads;
+	private double killsForMatch;
+	private double killsForMinute;
+	private double distanceAverage;
+	private double averageSurvivorTime;
+	private double averageDamage;
+	private double averageEffectivity;
+		
+
+	public Player(int level, int habilitieLevel, String name, double latence, avera) {
 		this.level = level;
 		this.habilitieLevel = habilitieLevel;
 		this.name = name;

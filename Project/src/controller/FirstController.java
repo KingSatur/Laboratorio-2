@@ -36,6 +36,7 @@ public class FirstController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("");
+        stage.setResizable(false);
         stage.show();
     }
     
@@ -47,6 +48,7 @@ public class FirstController {
         BorderPane pane = new BorderPane();
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.setTitle("Rank Player");
         stage.show();
     	
@@ -61,6 +63,7 @@ public class FirstController {
         BorderPane pane = new BorderPane();
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.setTitle("Nueva Ventana");
         stage.show();
     	
