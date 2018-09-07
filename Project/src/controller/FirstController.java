@@ -1,5 +1,6 @@
 package controller;
 
+import java.io.File;
 import java.io.IOException;
 
 import dataStructure.AlbertList;
@@ -29,29 +30,44 @@ public class FirstController {
     @FXML
     void modePlataform(ActionEvent event) throws IOException {
     	 
-    	Parent root = FXMLLoader.load(getClass().getResource("Second.fxml"));
+    	Parent root = FXMLLoader.load(getClass().getResource("/fxml/PlataformMode.fxml"));
         Stage stage = new Stage();
         BorderPane pane = new BorderPane();
-        Scene scene = new Scene(pane);
-
+        Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.setTitle("Nueva Ventana");
+        stage.setTitle("");
         stage.show();
     }
     
     @FXML
-    void rankPlayer(ActionEvent event) {
+    void rankPlayer(ActionEvent event) throws IOException {
     	
+    	Parent root = FXMLLoader.load(getClass().getResource("/fxml/RankedPlayer.fxml"));
+        Stage stage = new Stage();
+        BorderPane pane = new BorderPane();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Rank Player");
+        stage.show();
     	
     	
     }
     
     @FXML
-    void seeSystem(ActionEvent event) {
+    void seeSystem(ActionEvent event) throws IOException {
+    	
+    	Parent root = FXMLLoader.load(getClass().getResource("/fxml/System.fxml"));
+        Stage stage = new Stage();
+        BorderPane pane = new BorderPane();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Nueva Ventana");
+        stage.show();
     	
     	
     	
     }
+    
     
     
 }
