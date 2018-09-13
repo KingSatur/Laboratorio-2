@@ -1,78 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="334.0" prefWidth="631.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerRankedPlayer">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="158.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerRankedPlayer">
    <children>
-      <GridPane layoutX="40.0" layoutY="19.0" prefHeight="296.0" prefWidth="600.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="316.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="159.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="25.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Text fill="#ff6800" strokeType="OUTSIDE" strokeWidth="0.0" text="N a m e" GridPane.halignment="CENTER">
-               <font>
-                  <Font name="Freestyle Script" size="39.0" />
-               </font>
-            </Text>
-            <Text fill="#ff6800" strokeType="OUTSIDE" strokeWidth="0.0" text="L e v el" GridPane.halignment="CENTER" GridPane.rowIndex="1">
-               <font>
-                  <Font name="Freestyle Script" size="39.0" />
-               </font>
-            </Text>
-            <Text fill="#ff6800" strokeType="OUTSIDE" strokeWidth="0.0" text="H a b i l i t y  L e v el" GridPane.halignment="CENTER" GridPane.rowIndex="2">
-               <font>
-                  <Font name="Freestyle Script" size="39.0" />
-               </font>
-            </Text>
-            <Text fill="#ff6800" strokeType="OUTSIDE" strokeWidth="0.0" text="L a t e n c e" GridPane.halignment="CENTER" GridPane.rowIndex="3">
-               <font>
-                  <Font name="Freestyle Script" size="39.0" />
-               </font>
-            </Text>
-            <TextField fx:id="nameField" style="-fx-background-color: GRAY;" GridPane.columnIndex="1">
-               <cursor>
-                  <Cursor fx:constant="DEFAULT" />
-               </cursor></TextField>
-            <TextField fx:id="levelField" style="-fx-background-color: GRAY;" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <cursor>
-                  <Cursor fx:constant="DEFAULT" />
-               </cursor></TextField>
-            <TextField fx:id="habilityLeveField" style="-fx-background-color: GRAY;" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <cursor>
-                  <Cursor fx:constant="DEFAULT" />
-               </cursor></TextField>
-            <TextField fx:id="latenceField" style="-fx-background-color: GRAY;" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <cursor>
-                  <Cursor fx:constant="DEFAULT" />
-               </cursor></TextField>
-            <Button fx:id="create" mnemonicParsing="false" onAction="#toCreate" prefHeight="53.0" prefWidth="75.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-               <font>
-                  <Font name="Freestyle Script" size="6.0" />
-               </font>
-            </Button>
-            <Text fill="#1b0202" strokeType="OUTSIDE" strokeWidth="0.0" text="Create" wrappingWidth="47.013671875" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-               <font>
-                  <Font name="Freestyle Script" size="21.0" />
-               </font>
-            </Text>
-         </children>
-      </GridPane>
-      <Text layoutX="16.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fill="#ff1e00" layoutX="41.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAME OF PLAYER" wrappingWidth="223.00000529171666">
+         <font>
+            <Font name="Freestyle Script" size="36.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="namePLayer" layoutX="314.0" layoutY="36.0" prefHeight="8.0" prefWidth="287.0" style="-fx-background-color: GRAY;" />
+      <Button fx:id="createPlayer" layoutX="498.0" layoutY="89.0" mnemonicParsing="false" onAction="#toCreate" prefHeight="44.0" prefWidth="107.0" />
+      <Text fill="RED" layoutX="522.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create">
+         <font>
+            <Font name="Freestyle Script" size="33.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

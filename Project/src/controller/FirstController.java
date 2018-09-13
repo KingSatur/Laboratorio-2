@@ -2,7 +2,6 @@ package controller;
 
 import java.io.File;
 import java.io.IOException;
-
 import dataStructure.AlbertList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

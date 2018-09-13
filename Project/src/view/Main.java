@@ -21,6 +21,7 @@ public class Main extends Application {
 		primaryStage.setTitle("Fortnite");
 		primaryStage.show();
 	}
+	
 
 	public static void main(String[] args) {
 		launch(args);
