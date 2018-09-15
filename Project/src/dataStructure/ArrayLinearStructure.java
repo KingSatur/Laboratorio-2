@@ -10,16 +10,10 @@ public class ArrayLinearStructure<T> implements iHash<T> {
 	private boolean hashFunctionOne;
 
 	@SuppressWarnings("unchecked")
-	public ArrayLinearStructure(Class<T> c, int slot) {
-		array = (T[]) Array.newInstance(c, slot);
-	}
-	
-	@SuppressWarnings("unchecked")
-	public ArrayLinearStructure(Class<T> c, int slot, boolean a) {
-		array = (T[]) Array.newInstance(c, slot);
+	public ArrayLinearStructure(Class<T> c, int length, boolean a) {
+		array = (T[]) Array.newInstance(c, length);
 		hashFunctionOne = a;
 	}
-	
 	
 
 	public T[] getArray() {
