@@ -2,6 +2,10 @@ package model;
 
 public class Player{
 
+	private static final double VALUE_OF_KD = 0.40;
+	private static final double VALUE_OF_WON_MATCHS_ABOVE_LOSED_MATCHS = 0.40;
+	private static final double VALUE_OF_LEVEL = 0.10;
+	private static final double VALUE_OF_DAMAGE = 0.10;
 	private static final String GoodLatence = "Good";
 	private static final String BadLatence = "Bad";
 	private static final String MediumLatence = "Medium";
@@ -17,8 +21,6 @@ public class Player{
 	private int playedMatchs;
 	private int wonMatchs;
 	private double averageKillsAboveDeads;
-	private int killsForMatch;
-	private int killsForMinute;
 	private double distanceAverage;
 	private double averageDamage;
 	private double averageEffectivity;
@@ -33,8 +35,6 @@ public class Player{
 		this.kills = kills;
 		this.playedMatchs = playedMatchs;
 		this.wonMatchs = wonMatchs;
-		this.killsForMatch = killsForMatch;
-		this.killsForMinute = killsForMinute;
 		this.averageDamage = averageDamage;
 		this.averageEffectivity = averageEffectivity;
 	}
@@ -117,26 +117,6 @@ public class Player{
 
 	public void setAverageKillsAboveDeads(double averageKillsAboveDeads) {
 		this.averageKillsAboveDeads = averageKillsAboveDeads;
-	}
-
-
-	public int getKillsForMatch() {
-		return killsForMatch;
-	}
-
-
-	public void setKillsForMatch(int killsForMatch) {
-		this.killsForMatch = killsForMatch;
-	}
-
-
-	public int getKillsForMinute() {
-		return killsForMinute;
-	}
-
-
-	public void setKillsForMinute(int killsForMinute) {
-		this.killsForMinute = killsForMinute;
 	}
 
 
