@@ -28,8 +28,7 @@ public class ArrayLinearStructure<T> implements iHash<T> {
 
 	@Override
 	public int length() {
-		// TODO Auto-generated method stub
-		return 0;
+		return array.length;
 	}
 
 	@Override
