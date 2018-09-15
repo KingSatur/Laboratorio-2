@@ -7,11 +7,20 @@ import TDA.iHash;
 public class ArrayLinearStructure<T> implements iHash<T> {
 
 	T[] array;
+	private boolean hashFunctionOne;
 
 	@SuppressWarnings("unchecked")
 	public ArrayLinearStructure(Class<T> c, int slot) {
 		array = (T[]) Array.newInstance(c, slot);
 	}
+	
+	@SuppressWarnings("unchecked")
+	public ArrayLinearStructure(Class<T> c, int slot, boolean a) {
+		array = (T[]) Array.newInstance(c, slot);
+		hashFunctionOne = a;
+	}
+	
+	
 
 	public T[] getArray() {
 		return (T[]) array;
@@ -48,15 +57,18 @@ public class ArrayLinearStructure<T> implements iHash<T> {
 	}
 
 	@Override
-	public int hashFunctionOne() {
-		// TODO Auto-generated method stub
+	public int hashFunction() {
+		
+		if(hashFunctionOne) {
+			
+		}
+		else {
+			
+		}
+		
+		
 		return 0;
-	}
-
-	@Override
-	public int hashFunctionTwo() {
-		// TODO Auto-generated method stub
-		return 0;
+		
 	}
 
 }
