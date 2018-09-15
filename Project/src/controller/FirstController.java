@@ -2,7 +2,7 @@ package controller;
 
 import java.io.File;
 import java.io.IOException;
-import dataStructure.AlbertList;
+import dataStructure.LinearStructure;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +15,7 @@ import model.Player;
 
 public class FirstController {
 	
-	private AlbertList<Player> mainList;
+	private LinearStructure<Player> mainList;
 	
     @FXML
     private Button rankPlayer;

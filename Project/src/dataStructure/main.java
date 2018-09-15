@@ -6,7 +6,7 @@ public class main {
 
 	public static void main(String[] args) {
 
-		iQueue<Integer> queue = new AlbertList<Integer>();
+		iQueue<Integer> queue = new LinearStructure<Integer>();
 
 		// for (int i = 0; i < 10; i++) {
 		queue.equeue(1);
