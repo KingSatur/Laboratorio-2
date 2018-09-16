@@ -45,7 +45,7 @@ public class ArrayLinearStructure<T> implements iHash<T> {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+werwerwerwerwerwerweqrwer
 	@Override
 	public int hashFunction(int key) {
 		return key % length();
