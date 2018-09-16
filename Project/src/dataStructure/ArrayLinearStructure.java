@@ -51,5 +51,11 @@ public class ArrayLinearStructure<T> implements iHash<T> {
 		return key % length();
 		
 	}
+	
+	public void alberto() {
+		
+	}
+	
+	//ALBERTO ES UNA LOCA
 
 }
