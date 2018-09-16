@@ -14,7 +14,7 @@ public interface iHash<T> {
 
 	public Node<T> tableRetrieve();
 
-	public int hashFunction();
+	public int hashFunction(int key);
 
 
 }

@@ -3,19 +3,17 @@ package dataStructure;
 import java.lang.reflect.Array;
 
 import TDA.iHash;
+import model.Player;
 
 public class ArrayLinearStructure<T> implements iHash<T> {
 
 	T[] array;
-	private boolean hashFunctionOne;
 
 	@SuppressWarnings("unchecked")
-	public ArrayLinearStructure(Class<T> c, int length, boolean a) {
+	public ArrayLinearStructure(Class<T> c, int length) {
 		array = (T[]) Array.newInstance(c, length);
-		hashFunctionOne = a;
 	}
 	
-
 	public T[] getArray() {
 		return (T[]) array;
 	}
@@ -34,7 +32,6 @@ public class ArrayLinearStructure<T> implements iHash<T> {
 	@Override
 	public void tableInsert(Node<T> newNode) {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
@@ -50,17 +47,8 @@ public class ArrayLinearStructure<T> implements iHash<T> {
 	}
 
 	@Override
-	public int hashFunction() {
-		
-		if(hashFunctionOne) {
-			
-		}
-		else {
-			
-		}
-		
-		
-		return 0;
+	public int hashFunction(int key) {
+		return key % length();
 		
 	}
 

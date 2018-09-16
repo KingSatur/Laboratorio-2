@@ -11,11 +11,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import model.Fortnite;
 import model.Player;
 
 public class FirstController {
 	
-	private LinearStructure<Player> mainList;
+	private Fortnite fornite;
 	
     @FXML
     private Button rankPlayer;
@@ -25,6 +26,7 @@ public class FirstController {
     
     @FXML
     private Button modePlataform;
+    
     
     @FXML
     void modePlataform(ActionEvent event) throws IOException {
@@ -65,9 +67,18 @@ public class FirstController {
         stage.setResizable(false);
         stage.setTitle("Nueva Ventana");
         stage.show();
-    	
-    	
-    	
+    }
+
+	public Fortnite getFornite() {
+		return fornite;
+	}
+
+	public void setFornite(Fortnite fornite) {
+		this.fornite = fornite;
+	}
+    
+    public void initializateGame() {
+    	fornite = new Fortnite();
     }
     
     

@@ -11,6 +11,9 @@ import javafx.scene.Scene;
 
 
 public class Main extends Application {
+	
+	private FirstController firstController;
+	
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("/fxml/Interfaz.fxml"));
@@ -20,6 +23,8 @@ public class Main extends Application {
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Fortnite");
 		primaryStage.show();
+		firstController = new FirstController();
+		firstController.initializateGame();
 	}
 	
 
