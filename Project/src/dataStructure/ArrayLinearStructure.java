@@ -47,7 +47,7 @@ public class ArrayLinearStructure<T> implements iHash<T> {
 	}
 werwerwerwerwerwerweqrwer
 	@Override
-	public int hashFunction(int key) {
+	public int hashFunction(int key) {rwerwerwerwerwer
 		return key % length();
 		
 	}
