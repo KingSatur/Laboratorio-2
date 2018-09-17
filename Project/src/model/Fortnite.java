@@ -1,15 +1,18 @@
 package model;
 
 import dataStructure.ArrayLinearStructure;
+import dataStructure.LinearStructure;
 
 public class Fortnite {
 
-	private ArrayLinearStructure<Player> plataform;
-	private ArrayLinearStructure<Player> ranking;
+	private ArrayLinearStructure<LinearStructure<Player>> plataform;
+	private ArrayLinearStructure<LinearStructure<Player>> ranking;
+
+	
 	
 	public Fortnite() {
-		plataform = new ArrayLinearStructure<Player>(Player.class, 4);
-		ranking = new ArrayLinearStructure<Player>(Player.class, 20);
+		plataform = new ArrayLinearStructure<LinearStructure<Player>>(new LinearStructure<Player>(), 4);
+		ranking = new ArrayLinearStructure<LinearStructure<Player>>(new LinearStructure<Player>(), 20);
 	}
 	
 	

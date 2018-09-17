@@ -39,8 +39,10 @@ public class Player{
 		this.top10 = top10;
 		this.top5 = top5;
 	}
-
-
+	
+	public Player(String name) {
+		this.name = name;
+	}
 
 	public String getName() {
 		return name;

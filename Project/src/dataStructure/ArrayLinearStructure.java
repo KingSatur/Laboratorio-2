@@ -10,8 +10,8 @@ public class ArrayLinearStructure<T> implements iHash<T> {
 	T[] array;
 
 	@SuppressWarnings("unchecked")
-	public ArrayLinearStructure(Class<T> c, int length) {
-		array = (T[]) Array.newInstance(c, length);
+	public ArrayLinearStructure(LinearStructure c , int length) {
+		array = (T[]) Array.newInstance(c.getClass(), length);
 	}
 	
 	public T[] getArray() {
@@ -45,16 +45,17 @@ public class ArrayLinearStructure<T> implements iHash<T> {
 		// TODO Auto-generated method stub
 		return null;
 	}
-werwerwerwerwerwerweqrwer
+
 	@Override
-	public int hashFunction(int key) {rwerwerwerwerwer
+	public int hashFunction(int key) {
 		return key % length();
 		
 	}
 	
-	public void alberto() {
-		
+	public void agregar(LinearStructure c) {
+		array[0] = (T) c;
 	}
+	
 	
 	//ALBERTO ES UNA LOCA
 

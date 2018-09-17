@@ -11,20 +11,15 @@ public class LinearStructure<T> implements iStack<T>, iList<T>, iQueue<T> {
 	private Node<T> head;
 	private Node<T> end;
 	private int length;
-	private T[] arreglo;
 
 	public LinearStructure() {
 		super();
 		this.head = null;
 		this.end = null;
 		this.length = 0;
-		arreglo = (T[]) new Object[10];
-	}
 
-	public T[] getArreglo() {
-		return arreglo;
 	}
-
+	
 	@Override
 	public void addFirst(T type) {
 		Node<T> newNode = new Node<T>(type);
