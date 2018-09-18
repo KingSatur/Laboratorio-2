@@ -33,6 +33,8 @@ public class ControllerSystem implements Initializable{
     			"16) Bad skill and pessimum latence", "17) Pessimum skill and good latence", "18) Pessimum skill and medium latence" , "19) Pessimum skill and bad latence",
     			"20) Pessimum skill and pessimum latence");
     	comboRanking.setItems(lista);
+    	
+    	%$43524523532432432432432
     }
 
 	@Override
