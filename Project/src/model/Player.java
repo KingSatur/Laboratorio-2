@@ -7,32 +7,36 @@ public class Player{
 	private static final double VALUE_OF_TOP10_ABOVE_PLAYER_MATCHS = 0.10;
 	private static final double VALUE_OF_TOP5_ABOVE_PLAYER_MATCHS = 0.10;
 	private static final double VALUE_OF_DAMAGE = 0.10;
-		
+	
 	public static final int EXCELENT_SKILL_AND_GOOD_LATENCE= 20;
-	public static final int EXCELENT_SKILL_AND_BAD_LATENCE= 21;
-	public static final int EXCELENT_SKILL_AND_MEDIUM_LATENCE = 22;
+	public static final int EXCELENT_SKILL_AND_MEDIUM_LATENCE = 21;
+	public static final int EXCELENT_SKILL_AND_BAD_LATENCE= 22;
 	public static final int EXCELENT_SKILL_AND_PESSIMUM_LATENCE = 23;
+	
 	public static final int GOOD_SKILL_AND_GOOD_LATENCE = 24;
-	public static final int GOOD_SKILL_AND_MEDIUM_LATENCE= 26;
+	public static final int GOOD_SKILL_AND_MEDIUM_LATENCE= 25;
+	public static final int GOOD_SKILL_AND_BAD_LATENCE =26;
 	public static final int GOOD_SKILL_AND_PESSIMUM_LATENCE = 27;
+	
 	public static final int MEDIUM_SKILL_AND_GOOD_LATENCE  = 28;
-	public static final int MEDIUM_SKILL_AND_BAD_LATENCE = 29;
-	public static final int MEDIUM_SKILL_AND_MEDIUM_LATENCE = 30;
+	public static final int MEDIUM_SKILL_AND_MEDIUM_LATENCE = 29;
+	public static final int MEDIUM_SKILL_AND_BAD_LATENCE = 30;
 	public static final int MEDIUM_SKILL_AND_PESSIMUM_LATENCE= 31;
+	
 	public static final int BAD_SKILL_AND_GOOD_LATENCE = 32;
-	public static final int BAD_SKILL_AND_BAD_LATENCE = 33;
-	public static final int BAD_SKILL_AND_MEDIUM_LATENCE = 34;
+	public static final int BAD_SKILL_AND_MEDIUM_LATENCE = 33;
+	public static final int BAD_SKILL_AND_BAD_LATENCE = 34;
 	public static final int BAD_SKILL_AND_PESSIMUM_LATENCE = 35;
+	
 	public static final int PESSIMUM_SKILL_AND_GOOD_LATENCE= 36;
-	public static final int PESSIMIM_SKILL_AND_BAD_LATENCE = 37;
-	public static final int PESSIMIM_SKILL_AND_MEDIUM_LATENCE = 38;
-	public static final int PESSIMIM_SKILL_AND_PESSIMUM_LATENCE = 39;
+	public static final int PESSIMUM_SKILL_AND_MEDIUM_LATENCE = 37;
+	public static final int PESSIMUM_SKILL_AND_BAD_LATENCE = 38;
+	public static final int PESSIMUM_SKILL_AND_PESSIMUM_LATENCE = 39;
 	
 	private static final int PLAYSTATION = 4;
 	private static final int MICROSOFT = 5;
 	private static final int NINTENDO = 6;
 	private static final int PC = 7;
-	
 	private String name;
 	private double latence;
 	private int deads;
@@ -49,7 +53,7 @@ public class Player{
 	private double damage;
 		
 
-	public Player(String name, double latence, int deads, int kills, int playedMatchs, int wonMatchs, int killsForMatch, int killsForMinute,  double averageDamage, double averageEffectivity, int top10, int top5, double damage) {
+	public Player(String name, double latence, int deads, int kills, int playedMatchs, int wonMatchs, int top10, int top5, double damage) {
 		this.name = name;
 		this.latence = latence;
 		this.deads = deads;
@@ -163,17 +167,23 @@ public class Player{
 	}
 	
 	public void calculationSkill() {
-		// EL VALOR DEL SKILL VA DE 0 A 5 
+		// EL VALOR DEL SKILL VA DE 0 A 5
+		  calculationAverageTop5();
+		  calculationAverageTop10();
+		  calculationWonMatchsAboveLosedMatchs();
+		  calculationKD();
 		  skill = Math.ceil( (averageKillsAboveDeads*VALUE_OF_KD)+
 				  (averageWonMatchsAboveLosedMatchs*VALUE_OF_WON_MATCHS_ABOVE_LOSED_MATCHS)+
 				  (averageTop10*VALUE_OF_TOP10_ABOVE_PLAYER_MATCHS)+
 				  (averageTop5*VALUE_OF_TOP5_ABOVE_PLAYER_MATCHS)+
 				  (damage*VALUE_OF_DAMAGE) );
-		  
-		  
+	}
+	
+	public double getSkill() {
+		calculationSkill();
+		return skill;
 	}
 		
-	
 	
 	
 }

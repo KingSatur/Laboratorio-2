@@ -2,6 +2,7 @@ package view;
 	
 import java.io.IOException;
 
+import controller.ControllerSystem;
 import controller.FirstController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +14,7 @@ import javafx.scene.Scene;
 public class Main extends Application {
 	
 	private FirstController firstController;
+	private ControllerSystem controllerSystem;
 	
 	@Override
 	public void start(Stage primaryStage) throws IOException {
@@ -25,6 +27,7 @@ public class Main extends Application {
 		primaryStage.show();
 		firstController = new FirstController();
 		firstController.initializateGame();
+		
 	}
 	
 

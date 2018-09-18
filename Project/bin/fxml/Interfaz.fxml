@@ -10,9 +10,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FirstController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FirstController">
    <children>
-      <ImageView fitHeight="523.0" fitWidth="730.0">
+      <ImageView fitHeight="594.0" fitWidth="778.0">
          <image>
             <Image url="@Wallpaper%20Interfaz.jpg" />
          </image>
@@ -29,7 +29,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="rankPlayer" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#rankPlayer" prefHeight="46.0" prefWidth="316.0">
+            <Button fx:id="rankPlayer" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#rankPlayer" prefHeight="46.0" prefWidth="316.0" style="-fx-background-radius: 30;">
                <graphic>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rank Player">
                      <font>
@@ -37,7 +37,7 @@
                      </font>
                   </Text>
                </graphic></Button>
-            <Button fx:id="seeSystem" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#seeSystem" prefHeight="25.0" prefWidth="157.0" GridPane.rowIndex="2">
+            <Button fx:id="seeSystem" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#seeSystem" prefHeight="25.0" prefWidth="157.0" style="-fx-background-radius: 30;" GridPane.rowIndex="2">
                <graphic>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="See the system">
                      <font>
@@ -45,7 +45,7 @@
                      </font>
                   </Text>
                </graphic></Button>
-            <Button fx:id="modePlataform" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#modePlataform" textFill="WHITE" GridPane.rowIndex="4">
+            <Button fx:id="modePlataform" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#modePlataform" style="-fx-background-radius: 30;" textFill="WHITE" GridPane.rowIndex="4">
                <graphic>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Plataform mode" textAlignment="CENTER" wrappingWidth="155.70751953125">
                      <font>
