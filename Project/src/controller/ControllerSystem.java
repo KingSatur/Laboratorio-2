@@ -35,6 +35,17 @@ public class ControllerSystem implements Initializable{
     	comboRanking.setItems(lista);
     	
     	%$43524523532432432432432
+    	werewrwqerewq
+    	rwerwerweq
+    	rwerweqr
+    	weqr
+    	weqr
+    	wer
+    	wqer
+    	weqr
+    	weqrwe
+    	r
+    	w
     }
 
 	@Override
