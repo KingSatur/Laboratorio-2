@@ -33,16 +33,16 @@ public class ControllerSystem implements Initializable{
     @FXML
     public void initalize() {
     	setColumns();
-    	lista = FXCollections.observableArrayList("1) Excelent skill and good latence", "2) Excelent skill and medium latence" , " 3) Excelent skill and bad latence" ,
-    			"4) Excelent skill and pessimum latence" , "5) Good skill and good latence" , "6) Good skill and medium latence" , "7) Good skill and bad latence", 
-    			"8) Good skill and pessimum latence" , "9) Medium skill and good latence" , "10) Medium skill and medium latence" , "11) Medium skill and bad latence",
-    			"12) Medium skill and pessimum latence", "13) Bad skill and good latence" , "14) Bad skill and medium latence" , "15) Bad skill and bad latence" ,
-    			"16) Bad skill and pessimum latence", "17) Pessimum skill and good latence", "18) Pessimum skill and medium latence" , "19) Pessimum skill and bad latence",
-    			"20) Pessimum skill and pessimum latence");
+    	lista = FXCollections.observableArrayList("EXCELENT_SKILL_AND_GOOD_LATENCE", "EXCELENT_SKILL_AND_MEDIUM_LATENCE" , "EXCELENT_SKILL_AND_BAD_LATENCE" ,
+    			"EXCELENT_SKILL_AND_PESSIMUM_LATENCE" , "GOOD_SKILL_AND_GOOD_LATENCE" , "GOOD_SKILL_AND_MEDIUM_LATENCE" , "GOOD_SKILL_AND_BAD_LATENCE", 
+    			"GOOD_SKILL_AND_PESSIMUM_LATENCE" , "MEDIUM_SKILL_AND_GOOD_LATENCE" , "MEDIUM_SKILL_AND_MEDIUM_LATENCE" , "MEDIUM_SKILL_AND_BAD_LATENCE",
+    			"MEDIUM_SKILL_AND_PESSIMUM_LATENCE", "BAD_SKILL_AND_GOOD_LATENCE" , "BAD_SKILL_AND_MEDIUM_LATENCE" , "BAD_SKILL_AND_BAD_LATENCE" ,
+    			"BAD_SKILL_AND_PESSIMUM_LATENCE", "PESSIMUM_SKILL_AND_GOOD_LATENCE", "PESSIMUM_SKILL_AND_MEDIUM_LATENCE" , "PESSIMUM_SKILL_AND_BAD_LATENCE",
+    			"PESSIMUM_SKILL_AND_PESSIMUM_LATENCE");
     	comboRanking.setItems(lista);	
     }
     
-
+    werwerewrewr
     @FXML
     void comboPressed(ActionEvent event) {
     	System.out.println(comboRanking.getValue());
