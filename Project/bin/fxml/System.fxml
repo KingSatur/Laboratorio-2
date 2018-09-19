@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
@@ -9,16 +10,21 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerSystem">
    <children>
-      <ImageView fitHeight="570.0" fitWidth="992.0">
+      <ImageView fitHeight="570.0" fitWidth="987.0">
          <image>
             <Image url="@../../../../../Desktop/Fondo2.jpg" />
          </image>
       </ImageView>
-      <ComboBox fx:id="comboRanking" layoutX="14.0" layoutY="81.0" prefHeight="49.0" prefWidth="289.0" promptText="Rank" style="-fx-background-radius: 30;" />
-      <Text fill="#37ff00" layoutX="61.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Ranking">
+      <ComboBox fx:id="comboRanking" layoutX="14.0" layoutY="72.0" onAction="#comboPressed" prefHeight="49.0" prefWidth="289.0" promptText="Rank" style="-fx-background-radius: 30;" />
+      <Text fill="#37ff00" layoutX="61.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Ranking">
          <font>
             <Font name="Freestyle Script" size="49.0" />
          </font>
       </Text>
+      <TableView fx:id="mainTable" layoutX="14.0" layoutY="125.0" prefHeight="320.0" prefWidth="289.0" style="-fx-background-radius: 20;">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
    </children>
 </Pane>
