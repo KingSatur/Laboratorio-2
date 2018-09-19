@@ -43,6 +43,7 @@ public class ControllerSystem implements Initializable{
     }
     
     werwerewrewr
+    qwewqewqewee
     @FXML
     void comboPressed(ActionEvent event) {
     	System.out.println(comboRanking.getValue());
