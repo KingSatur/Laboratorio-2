@@ -49,12 +49,14 @@ public class LinearStructure<T> implements iStack<T>, iList<T>, iQueue<T> {
 			this.head = newNode;
 			this.end = newNode;
 			length++;
+			
 		} else {
 			newNode.setNextElement(null);
 			newNode.setPreviousElement(end);
 			end.setNextElement(newNode);
 			end = newNode;
 			length++;
+			
 		}
 
 	}
@@ -245,7 +247,7 @@ public class LinearStructure<T> implements iStack<T>, iList<T>, iQueue<T> {
 	}
 
 	@Override
-	public Node<T> searchFirts() {
+	public Node<T> searchFirst() {
 		return head;
 	}
 

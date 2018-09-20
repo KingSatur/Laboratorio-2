@@ -1,5 +1,8 @@
 package model;
 
+import TDA.iStack;
+import dataStructure.LinearStructure;
+
 public class Player{
 
 	private static final double VALUE_OF_KD = 0.35;
@@ -33,10 +36,14 @@ public class Player{
 	public static final int PESSIMUM_SKILL_AND_BAD_LATENCE = 38;
 	public static final int PESSIMUM_SKILL_AND_PESSIMUM_LATENCE = 39;
 	
-	private static final int PLAYSTATION = 4;
-	private static final int MICROSOFT = 5;
-	private static final int NINTENDO = 6;
-	private static final int PC = 7;
+	public static final int PLAYSTATION = 5;
+	public static final int MICROSOFT = 6;
+	public static final int MACOS = 7;
+	public static final int XBOX = 8;
+	public static final int NINTENDO = 9;
+	
+	
+	
 	private String name;
 	private double latence;
 	private int deads;
@@ -51,9 +58,11 @@ public class Player{
 	private double averageTop10;
 	private double averageTop5;
 	private double damage;
-		
+	private String platform;	
+	
+	private iStack<Weapon> inventory;
 
-	public Player(String name, double latence, int deads, int kills, int playedMatchs, int wonMatchs, int top10, int top5, double damage) {
+	public Player(String name, double latence, int deads, int kills, int playedMatchs, int wonMatchs, int top10, int top5, double damage, String platform) {
 		this.name = name;
 		this.latence = latence;
 		this.deads = deads;
@@ -63,10 +72,19 @@ public class Player{
 		this.top10 = top10;
 		this.top5 = top5;
 		this.damage = damage;
+		this.platform = platform;
+		
+		inventory = new LinearStructure<Weapon>();
+		inventory.push(new Weapon("peak", 0));
+		
 	}
 	
 	public Player(String name) {
 		this.name = name;
+
+		inventory = new LinearStructure<Weapon>();
+		inventory.push(new Weapon("peak", 0));
+		
 	}
 
 	public String getName() {
@@ -138,6 +156,67 @@ public class Player{
 		this.averageKillsAboveDeads = averageKillsAboveDeads;
 	}
 	
+	
+	public double getAverageWonMatchsAboveLosedMatchs() {
+		return averageWonMatchsAboveLosedMatchs;
+	}
+
+	public void setAverageWonMatchsAboveLosedMatchs(double averageWonMatchsAboveLosedMatchs) {
+		this.averageWonMatchsAboveLosedMatchs = averageWonMatchsAboveLosedMatchs;
+	}
+
+	public int getTop5() {
+		return top5;
+	}
+
+	public void setTop5(int top5) {
+		this.top5 = top5;
+	}
+
+	public int getTop10() {
+		return top10;
+	}
+
+	public void setTop10(int top10) {
+		this.top10 = top10;
+	}
+
+	public double getAverageTop10() {
+		return averageTop10;
+	}
+
+	public void setAverageTop10(double averageTop10) {
+		this.averageTop10 = averageTop10;
+	}
+
+	public double getAverageTop5() {
+		return averageTop5;
+	}
+
+	public void setAverageTop5(double averageTop5) {
+		this.averageTop5 = averageTop5;
+	}
+
+	public double getDamage() {
+		return damage;
+	}
+
+	public void setDamage(double damage) {
+		this.damage = damage;
+	}
+
+	public String getPlatform() {
+		return platform;
+	}
+
+	public void setPlatform(String platform) {
+		this.platform = platform;
+	}
+
+	public void setSkill(double skill) {
+		this.skill = skill;
+	}
+
 	public void calculationKD() {
 		averageKillsAboveDeads = kills/deads;
 		if(averageKillsAboveDeads >= 5) {
@@ -183,8 +262,21 @@ public class Player{
 		calculationSkill();
 		return skill;
 	}
-		
 	
+	public void pickUpWeapon(Weapon newWeapon) {
+		inventory.push(newWeapon);
+	}
+	
+	public void shoot() {
+		
+		if(!inventory.top().getType().getName().equalsIgnoreCase("peak")) {
+			inventory.top().getType().setAmmo(inventory.top().getType().getAmmo()-2);
+			if(inventory.top().getType().getAmmo() == 0) {
+				inventory.pop();
+			}
+		}
+	}
+		
 	
 }
 	

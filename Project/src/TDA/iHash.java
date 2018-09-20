@@ -12,7 +12,7 @@ public interface iHash<T> {
 
 	public void tableDelete(int Key);
 
-	public Node<T> tableRetrieve();
+	public T tableRetrieve(int key);
 
 	public int hashFunction(int key);
 

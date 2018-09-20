@@ -42,9 +42,7 @@ public class ControllerSystem implements Initializable{
     	comboRanking.setItems(lista);	
     }
     
-    werwerewrewr
-    qwewqewqewee
-    qweqweqwewe
+   
     @FXML
     void comboPressed(ActionEvent event) {
     	System.out.println(comboRanking.getValue());
@@ -63,24 +61,24 @@ public class ControllerSystem implements Initializable{
     }
     
     public void insertColumns() {
-    	mainTable.setEditable(true);
-    	listPlayers = FXCollections.observableArrayList();
-    	listPlayers.clear();
-    	Player p1 = new Player("Juanda", 100, 40, 70, 100, 30, 20, 40, 5);
-    	Player p2 = new Player("Leo", 200, 40, 70, 100, 30, 20, 40, 5);
-    	Player p3 = new Player("Pat324ron", 300, 40, 70, 100, 30, 20, 40, 5);
-    	Player p4 = new Player("Juanda32", 100, 40, 70, 100, 30, 20, 40, 5);
-    	Player p5 = new Player("Lewero", 200, 40, 70, 100, 30, 20, 40, 5);
-    	Player p6 = new Player("Patrewron", 300, 40, 70, 100, 30, 20, 40, 5);
-    	Player p7 = new Player("Juandwera", 100, 40, 70, 100, 30, 20, 40, 5);
-    	Player p8 = new Player("Lewero", 200, 40, 70, 100, 30, 20, 40, 5);
-    	Player p9 = new Player("Patrweron", 300, 40, 70, 100, 30, 20, 40, 5);
-    	Player p10 = new Player("Juandwera", 100, 40, 70, 100, 30, 20, 40, 5);
-    	Player p11 = new Player("Lewero", 200, 40, 70, 100, 30, 20, 40, 5);
-    	Player p12 = new Player("Patrweron", 300, 40, 70, 100, 30, 20, 40, 5);
-    	Player p13 = new Player("Patr12312312312323ron", 300, 40, 70, 100, 30, 20, 40, 5);
-    	listPlayers.addAll(p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12, p13);
-    	mainTable.setItems(listPlayers);
+//    	mainTable.setEditable(true);
+//    	listPlayers = FXCollections.observableArrayList();
+//    	listPlayers.clear();
+//    	Player p1 = new Player("Juanda", 100, 40, 70, 100, 30, 20, 40, 5);
+//    	Player p2 = new Player("Leo", 200, 40, 70, 100, 30, 20, 40, 5);
+//    	Player p3 = new Player("Pat324ron", 300, 40, 70, 100, 30, 20, 40, 5);
+//    	Player p4 = new Player("Juanda32", 100, 40, 70, 100, 30, 20, 40, 5);
+//    	Player p5 = new Player("Lewero", 200, 40, 70, 100, 30, 20, 40, 5);
+//    	Player p6 = new Player("Patrewron", 300, 40, 70, 100, 30, 20, 40, 5);
+//    	Player p7 = new Player("Juandwera", 100, 40, 70, 100, 30, 20, 40, 5);
+//    	Player p8 = new Player("Lewero", 200, 40, 70, 100, 30, 20, 40, 5);
+//    	Player p9 = new Player("Patrweron", 300, 40, 70, 100, 30, 20, 40, 5);
+//    	Player p10 = new Player("Juandwera", 100, 40, 70, 100, 30, 20, 40, 5);
+//    	Player p11 = new Player("Lewero", 200, 40, 70, 100, 30, 20, 40, 5);
+//    	Player p12 = new Player("Patrweron", 300, 40, 70, 100, 30, 20, 40, 5);
+//    	Player p13 = new Player("Patr12312312312323ron", 300, 40, 70, 100, 30, 20, 40, 5);
+//    	listPlayers.addAll(p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12, p13);
+//    	mainTable.setItems(listPlayers);
     }
     
 	@Override

@@ -10,7 +10,7 @@ public class ArrayLinearStructure<T> implements iHash<T> {
 	T[] array;
 
 	@SuppressWarnings("unchecked")
-	public ArrayLinearStructure(LinearStructure c , int length) {
+	public ArrayLinearStructure(T c , int length) {
 		array = (T[]) Array.newInstance(c.getClass(), length);
 	}
 	
@@ -20,9 +20,15 @@ public class ArrayLinearStructure<T> implements iHash<T> {
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		
+		boolean empty = false;
+		for (int i = 0; i < array.length; i++) {
+			empty = array[i] == null;
+		}
+	
+		return empty;
 	}
+	
 
 	@Override
 	public int length() {
@@ -31,19 +37,18 @@ public class ArrayLinearStructure<T> implements iHash<T> {
 
 	@Override
 	public void tableInsert(Node<T> newNode) {
-		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
-	public void tableDelete(int Key) {
-		// TODO Auto-generated method stub
-
+	public void tableDelete(int key) {
+		array[hashFunction(key)] = null;
 	}
 
 	@Override
-	public Node<T> tableRetrieve() {
-		// TODO Auto-generated method stub
-		return null;
+	public T tableRetrieve(int key) {
+		
+		return  (T) array[hashFunction(key)];
 	}
 
 	@Override
@@ -55,8 +60,5 @@ public class ArrayLinearStructure<T> implements iHash<T> {
 	public void agregar(LinearStructure c) {
 		array[0] = (T) c;
 	}
-	
-	
-	//ALBERTO ES UNA LOCA
 
 }

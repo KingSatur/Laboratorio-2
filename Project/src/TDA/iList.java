@@ -28,7 +28,7 @@ public interface iList<T> {
 
 	public void deleteIndex(int index) throws emptyListException;
 
-	public Node<T> searchFirts();
+	public Node<T> searchFirst();
 
 	public Node<T> searchEnd();
 
