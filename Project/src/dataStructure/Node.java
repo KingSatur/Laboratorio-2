@@ -1,6 +1,8 @@
 package dataStructure;
 
-public class Node<T> {
+import java.io.Serializable;
+
+public class Node<T> implements Serializable{
 
 	private T type;
 	private Node<T> nextElement;

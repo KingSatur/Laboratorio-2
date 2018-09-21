@@ -2,10 +2,14 @@ package controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import dataStructure.LinearStructure;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -14,7 +18,7 @@ import javafx.stage.Stage;
 import model.Fortnite;
 import model.Player;
 
-public class FirstController {
+public class FirstController implements Initializable {
 	
 	private Fortnite fornite;
 	
@@ -77,9 +81,11 @@ public class FirstController {
 		this.fornite = fornite;
 	}
     
-    public void initializateGame() {
-    	fornite = new Fortnite();
-    }
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		fornite = new Fortnite();
+		
+	}
     
     
     

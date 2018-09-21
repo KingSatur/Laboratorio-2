@@ -2,11 +2,14 @@ package dataStructure;
 
 import exceptions.NodeNotExistException;
 import exceptions.emptyListException;
+
+import java.io.Serializable;
+
 import TDA.iList;
 import TDA.iQueue;
 import TDA.iStack;
 
-public class LinearStructure<T> implements iStack<T>, iList<T>, iQueue<T> {
+public class LinearStructure<T> implements iStack<T>, iList<T>, iQueue<T>, Serializable{
 
 	private Node<T> head;
 	private Node<T> end;

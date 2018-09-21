@@ -1,9 +1,11 @@
 package model;
 
+import java.io.Serializable;
+
 import TDA.iStack;
 import dataStructure.LinearStructure;
 
-public class Player{
+public class Player implements Serializable{
 
 	private static final double VALUE_OF_KD = 0.35;
 	private static final double VALUE_OF_WON_MATCHS_ABOVE_LOSED_MATCHS = 0.35;

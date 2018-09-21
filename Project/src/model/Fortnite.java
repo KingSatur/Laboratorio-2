@@ -5,13 +5,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 import dataStructure.ArrayLinearStructure;
 import dataStructure.LinearStructure;
 import thread.threadPlatform;
 import thread.threadRanking;
 
-public class Fortnite {
+public class Fortnite{
 
 	private ArrayLinearStructure<LinearStructure<Player>> ranking;
 	private ArrayLinearStructure<LinearStructure<Player>> plataform;
@@ -23,7 +24,6 @@ public class Fortnite {
 	
 	public Fortnite() {
 		players = new Player[100000];
-		players = new Player[100];
 		InputPlayers();
 		plataform = new ArrayLinearStructure<LinearStructure<Player>>(new LinearStructure<Player>(), 5);
 		ranking = new ArrayLinearStructure<LinearStructure<Player>>(new LinearStructure<Player>(), 20);

@@ -26,7 +26,6 @@ public class Main extends Application {
 		primaryStage.setTitle("Fortnite");
 		primaryStage.show();
 		firstController = new FirstController();
-		firstController.initializateGame();
 		
 	}
 	

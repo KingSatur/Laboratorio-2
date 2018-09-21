@@ -2,7 +2,7 @@ package TDA;
 
 import dataStructure.Node;
 
-public interface iStack<T> {
+public interface iStack<T>{
 
 	public void push(T type);
 
